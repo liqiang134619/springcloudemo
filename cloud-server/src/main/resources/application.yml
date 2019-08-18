@@ -1,0 +1,15 @@
+server:
+  port: 31400
+spring:
+  application:
+    name: cloud-server
+eureka:
+  client:
+    register-with-eureka: true #服务注册开关
+    fetch-registry: true # 服务发现开关
+    service-url: #与注册中心交互，用逗号隔开
+      defaultZone: ${EUREKA_SERVER:http://localhost:51010/eureka/}
+  instance:
+    prefer-ip-address: true #ip注册到eureka
+    ip-address: ${IP_ADDRESS:127.0.0.1}
+    instance-id: ${SPRING.APPLICATION.NAME}:${SERVER.PORT} #指定实例ip
