@@ -1,9 +1,8 @@
 server:
-  port: 31400
+  port: 31500
 spring:
   application:
-    name: cloud-server
-
+    name: cloud-consumer
 eureka:
   client:
     register-with-eureka: true #服务注册开关
@@ -14,4 +13,5 @@ eureka:
     prefer-ip-address: true #ip注册到eureka
     ip-address: ${IP_ADDRESS:127.0.0.1}
     instance-id: ${SPRING.APPLICATION.NAME}:${SERVER.PORT} #指定实例ip
-
+    lease-expiration-duration-in-seconds: 90 #定义服务失效的时间，默认为90秒
+    lease-renewal-interval-in-seconds: 30 #定义服务续约任务的调用时间，默认30秒
