@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
     <artifactId>test-rabbitmq</artifactId>
+    <name>test-rabbitmq</name>
 
 
     <dependencies>
