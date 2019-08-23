@@ -15,26 +15,29 @@ public class RabbitmqTest {
 
     public static void main(String[] args) {
 
-        System.out.println("fuck");
-        ConnectionFactory connectionFactory = new ConnectionFactory();
-        connectionFactory.setHost("127.0.0.1");
-        connectionFactory.setPort(5672);
-        connectionFactory.setUsername("guest");
-        connectionFactory.setPassword("guest");
-        connectionFactory.setVirtualHost("/");
-        Connection connection = null;
-        Channel channel = null;
-
-        try {
-            connection = connectionFactory.newConnection();
-            channel = connection.createChannel();
-            channel.queueDeclare("ququ001",true,false,false,null);
-            String message = "hello world";
-            channel.basicPublish("","queue001",null,message.getBytes());
-            System.out.println("send to mq");
-        } catch (IOException | TimeoutException e) {
-            e.printStackTrace();
-        }
+//        System.out.println("fuck");
+//        ConnectionFactory connectionFactory = new ConnectionFactory();
+//        connectionFactory.setHost("127.0.0.1");
+//        connectionFactory.setPort(5672);
+//        connectionFactory.setUsername("guest");
+//        connectionFactory.setPassword("guest");
+//        connectionFactory.setVirtualHost("/");
+//        Connection connection = null;
+//        Channel channel = null;
+//
+//        try {
+//            connection = connectionFactory.newConnection();
+//            channel = connection.createChannel();
+//            channel.queueDeclare("ququ001",true,false,false,null);
+//            String message = "hello world";
+//            channel.basicPublish("","queue001",null,message.getBytes());
+//            System.out.println("send to mq");
+//        } catch (IOException | TimeoutException e) {
+//            e.printStackTrace();
+//        }
+        String s = "2019-12-1244";
+        String substring = s.substring(0, 11);
+        System.out.println(substring);
 
     }
 
