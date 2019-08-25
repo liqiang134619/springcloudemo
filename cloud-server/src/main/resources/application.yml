@@ -1,5 +1,5 @@
 server:
-  port: 31400
+  port: 31000
 spring:
   application:
     name: cloud-server

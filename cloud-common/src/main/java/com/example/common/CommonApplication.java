@@ -1,0 +1,16 @@
+package com.example.common;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * @author Liq
+ * @date 2019/8/25
+ */
+@SpringBootApplication
+public class CommonApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(CommonApplication.class, args);
+    }
+}
