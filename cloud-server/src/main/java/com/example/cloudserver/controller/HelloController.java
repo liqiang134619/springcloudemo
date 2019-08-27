@@ -2,6 +2,7 @@ package com.example.cloudserver.controller;
 
 import com.example.cloudserver.Entity.User;
 import com.example.common.service.CommonService;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,9 +24,10 @@ public class HelloController {
     CommonService commonService;
 
     @GetMapping("/hello")
-    public String hello() {
-        int a = 7 / 0;
-        return "hello spring cloud";
+    public String hello(HttpServletRequest request) {
+        String header = request.getHeader("token");
+
+        return "hello spring cloud, " + header;
     }
 
     @GetMapping("/hello1")
