@@ -2,7 +2,9 @@ package com.example.cloudserver.controller;
 
 import com.example.cloudserver.Entity.User;
 import com.example.common.service.CommonService;
+import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,10 +26,13 @@ public class HelloController {
     CommonService commonService;
 
     @GetMapping("/hello")
-    public String hello(HttpServletRequest request) {
+    public String hello(HttpServletRequest request, HttpServletResponse response)
+        throws IOException {
         String header = request.getHeader("token");
-
-        return "hello spring cloud, " + header;
+        response.sendError(999,"error");
+//        response.setContentType("application/json;charset=utf-8");
+//        response.getWriter().write("哈哈");
+        return null;
     }
 
     @GetMapping("/hello1")

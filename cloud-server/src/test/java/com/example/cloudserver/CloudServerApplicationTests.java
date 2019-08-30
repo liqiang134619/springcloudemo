@@ -1,5 +1,7 @@
 package com.example.cloudserver;
 
+import com.example.cloudserver.confis.HotelProperties;
+import java.util.HashSet;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,5 +12,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class CloudServerApplicationTests {
 
+    @Autowired
+    HotelProperties hotelProperties;
 
+
+    @Test
+    public void test1() {
+
+        HashSet<String> ids = hotelProperties.getIds();
+        ids.forEach(System.out::print);
+
+    }
 }
