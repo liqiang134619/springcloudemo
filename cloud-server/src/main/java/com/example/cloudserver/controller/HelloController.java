@@ -28,11 +28,16 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello(HttpServletRequest request, HttpServletResponse response)
         throws IOException {
+//        String header = request.getHeader("token");
+//        response.sendError(999,"error");
+////        response.setContentType("application/json;charset=utf-8");
+////        response.getWriter().write("哈哈");
+//        return null;
         String header = request.getHeader("token");
-        response.sendError(999,"error");
-//        response.setContentType("application/json;charset=utf-8");
-//        response.getWriter().write("哈哈");
-        return null;
+        if(header != null) {
+            return header;
+        }
+        return "yeah, hello";
     }
 
     @GetMapping("/hello1")
