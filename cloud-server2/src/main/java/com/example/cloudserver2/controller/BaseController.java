@@ -59,4 +59,10 @@ public class BaseController {
         return request.toString();
     }
 
+    @PostMapping("/con8")
+    public String con8(String name,String age){
+        return name +"," + age;
+    }
+
+
 }

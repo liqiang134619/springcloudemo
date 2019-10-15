@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>cloud-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cloud-server</name>
+	<name>cloud-server1</name>
 	<description>Demo project for Spring Boot</description>
 	<packaging>jar</packaging>
 	<properties>

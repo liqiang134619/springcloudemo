@@ -2,7 +2,7 @@ server:
   port: 31500
 spring:
   application:
-    name: cloud-consumer
+    name: cloud-consumer1
 eureka:
   client:
     register-with-eureka: true #服务注册开关

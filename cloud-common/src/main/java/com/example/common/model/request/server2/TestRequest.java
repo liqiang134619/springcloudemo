@@ -10,7 +10,6 @@ import lombok.Data;
 public class TestRequest {
 
     private String name;
-    private int age;
-    private long[] nums;
+    private String age;
 
 }

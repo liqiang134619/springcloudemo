@@ -27,7 +27,8 @@
         <module>cloud-consumer2</module>
         <module>cloud-common</module>
         <module>cloud-server2</module>
-    </modules>
+		<module>cloud-gateway</module>
+	</modules>
 
 	<dependencies>
         <!--公共依赖-->

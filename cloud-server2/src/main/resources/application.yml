@@ -2,7 +2,7 @@ server:
   port: 33000
 spring:
   application:
-    name: cloud-server
+    name: cloud-server2
 
 eureka:
   client:
